@@ -1,10 +1,10 @@
 from tqdm import tqdm
-import matplotlib.pyplot as plt # For plotting
+import matplotlib.pyplot as plt 
 import numpy as np  
 import os
-from Bio import SeqIO         # To run Biopython
-import pandas as pd           # To read input data
-import multiprocessing        # To run FIMO in parallel
+from Bio import SeqIO         
+import pandas as pd          
+import multiprocessing        
 from functools import partial
 
 
@@ -14,7 +14,7 @@ def reduceSequence(sequence):
 
 
 
-def FIMO( output_dir = './Regulatory_Prior_Network_Data/output/fimo_output/', tfi, geneNames, tfNames, pqval, pathos):
+def FIMO(tfi, output_dir, geneNames, tfNames, pqval, pathos):
     os.chdir(pathos)
     os.chdir(output_dir)
     regMatQval = np.zeros((1,len(geneNames))) 
@@ -28,7 +28,7 @@ def FIMO( output_dir = './Regulatory_Prior_Network_Data/output/fimo_output/', tf
     else:
         
         os.chdir(pathos)
-        os.chdir('./Regulatory_Prior_Network_Data/output/fimo_output/' + tfNames[tfi])
+        os.chdir(output_dir + tfNames[tfi])
         
     try:
         tf = pd.read_csv('fimo.tsv',sep='\t', comment='#')
