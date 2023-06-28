@@ -20,13 +20,13 @@ def main():
 
     os.chdir(pathos)
     geneNames  = []
-    fasta_sequences = SeqIO.parse(open('./data/hg38_sequence_Tss1000_Tss1000.fasta'),'fasta')
+    fasta_sequences = SeqIO.parse(open('/Users/anwer/Desktop/github_repo/Gene_Regulatory_Network_ROSMAP/Regulatory_prior_network/data/t2t_TSS1000_TSS1000_final.fasta'),'fasta')
     for fasta in tqdm(fasta_sequences):
         name, sequence = fasta.id, str(fasta.seq)
         geneNames.append(name)
 
     nTFs = len(tfNames)
-    pool = multiprocessing.Pool(8)
+    pool = multiprocessing.Pool(10)
     res  = pool.map(partial(FIMO,output_dir = './data/fimo_output/',tfNames=tfNames,geneNames=geneNames,pqval=0,pathos = pathos), range(nTFs))
     res  = pd.concat(res)
     res.to_csv('regMatPval1e3.csv')
