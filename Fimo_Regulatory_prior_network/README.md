@@ -6,7 +6,7 @@
 3. Run python main.py to get regMatpval0.000005.csv (main.py)
 4. Run section 3 (few cells) and 4 to get TF_genes.txt (building_a_regulation_prior_network_T2T.ipynb)
 
-## Input Files
+## Input Files (https://drive.google.com/drive/folders/1k_QlRpoCSpDcFIoJ8ktVAtHgyR6ThSdr?usp=sharing)
 
 - cat_gene_sequence.fasta
 - cat_gene_info.csv
