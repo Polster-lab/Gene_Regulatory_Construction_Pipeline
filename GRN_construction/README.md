@@ -22,3 +22,14 @@
 - TF_Genes.txt (Filtered TF_Genes)
 - TF_PPI.csv (Filtered TF_PPI)
 
+
+
+# Construct GRN
+
+- git clone https://github.com/netZoo/netZooPy.git
+- Place GRN_construction.py in netZooPy/netZooPy/ directory
+- replace netZooPy/netZooPy/lioness/lioness.py with modified lioness.pu
+- Execute python run_lioness.py
+
+Warning: Change directory path 
+
