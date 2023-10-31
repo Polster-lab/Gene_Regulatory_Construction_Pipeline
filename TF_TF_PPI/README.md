@@ -1,4 +1,4 @@
-# Constructing TF-Genes network (motif data) for T2T consortium 
+# Extracting TF_TF_PPI
 
 ## Steps
 1. Run Jupyter notebook to create TF_TF_PPI
